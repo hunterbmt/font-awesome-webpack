@@ -1,7 +1,7 @@
 font-awesome-webpack
 ====================
 
-Font awesome configuration and loading package for webpack, using font-awesome (Less).
+Font awesome configuration and loading package for webpack, using font-awesome (Sass).
 
 Based on bootstrap-webpack by Scott Bleck (@bline).
 
@@ -40,7 +40,7 @@ require("font-awesome-webpack");
 You can configurate font-awesome-webpack with two configuration files:
 
 * `font-awesome.config.js`
-* `font-awesome.config.less`
+* `font-awesome.config.scss`
 
 Add both files *next to each other* in your project. Then:
 
@@ -77,7 +77,7 @@ module.exports = {
 };
 ```
 
-#### `font-awesome.config.less`
+#### `font-awesome.config.scss`
 
 Imported after Font-Awesome's default variables, but before anything else.
 
@@ -85,7 +85,7 @@ You may customize Font-Awesome here.
 
 Example:
 
-``` less
+``` scss
 @fa-inverse: #eee;
 @fa-border-color: #ddd;
 ```
@@ -98,7 +98,7 @@ Example:
 
 ``` javascript
 module.exports = {
-  styleLoader: require('extract-text-webpack-plugin').extract('style-loader', 'css-loader!less-loader'),
+  styleLoader: require('extract-text-webpack-plugin').extract('style-loader', 'css-loader!scss-loader'),
   styles: {
     ...
   }
